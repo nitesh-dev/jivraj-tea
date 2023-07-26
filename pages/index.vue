@@ -34,7 +34,16 @@
     </section>
 
 
-
+    <!-- ------------- products section ------------ -->
+    <section class="products">
+        <div class="page">
+            <h4>OUR PRODUCTS</h4>
+            <h2>Discover Our Products Line</h2>
+            <div class="products-container">
+                <Product></Product>
+            </div>
+        </div>
+    </section>
 </template>
 <style scoped>
 /* ------------------ about section ---------------- */
@@ -54,13 +63,13 @@
 }
 
 
-.about button{
+.about button {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.about button svg{
+.about button svg {
     fill: white;
 }
 
@@ -68,12 +77,31 @@
     width: 80%;
 }
 
-.about h2{
+.about h2 {
     margin-top: 0;
     font-weight: bold;
 }
 
-.about h4{
+.about h4 {
+    margin-bottom: 0.4em;
+    color: var(--color-primary);
+}
+
+
+
+
+/* ------------------- product sections ---------------- */
+
+.products {
+    min-height: 400px;
+}
+
+.products h2 {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.products h4 {
     margin-bottom: 0.4em;
     color: var(--color-primary);
 }
