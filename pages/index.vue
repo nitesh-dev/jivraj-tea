@@ -34,6 +34,8 @@
     </section>
 
     <Products></Products>
+    
+    <Testimonial></Testimonial>
 
 
 

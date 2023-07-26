@@ -37,7 +37,7 @@
     </section>
 </template>
 <style scoped>
-/* ------------------- product sections ---------------- */
+
 
 .products {
     min-height: 400px;
