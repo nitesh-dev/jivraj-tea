@@ -34,8 +34,8 @@
     </section>
 
     <Products></Products>
-    
     <Testimonial></Testimonial>
+    <Gallery></Gallery>
 
 
 

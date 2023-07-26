@@ -50,7 +50,7 @@
 </template>
 <style scoped>
 .testimonial {
-    min-height: 500px;
+    min-height: 400px;
     background-image: url('../public/images/outlines/leaf-outline.png');
     background-position: center;
     background-repeat: no-repeat;
