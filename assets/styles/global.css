@@ -1,12 +1,22 @@
-
 * {
-    margin: 0;
     box-sizing: border-box;
     font-family: 'Lora';
 }
 
+body {
+    margin: 0;
+}
+
 :root {
     --max-page-width: 1280px;
+
+    --color-surface: white;
+    --color-surface-variant: #F4F4F4;
+    --color-primary: #035BA8;
+    --color-on-primary: white;
+    --color-on-surface:#333;
+    --color-on-surface-variant: #7F7F7F;
+
     /* --page-margin: 24px;
     --default-border-radius: 4px;
     --border-radius-medium: 8px;
@@ -27,8 +37,8 @@
 
 
 
-    --big-2-font: 28px;
-    --big-font: 24px;
+    --big-font: 42px;
+    --average-2-font: 24px;
     --average-font: 20px;
     --medium-font: 16px;
     --medium-2-font: 18px;
@@ -41,14 +51,77 @@
     -webkit-text-size-adjust: 100%;
 }
 
+.page {
+    max-width: var(--max-page-width);
+    margin: auto;
+    padding: 0 24px;
+}
+
 p {
     font-size: 18px;
     line-height: 1.6;
 }
 
-h2 {
+
+h1 {
     font-size: var(--big-font);
+    color: var(--color-on-surface);
 }
+
+h2 {
+    font-size: var(--average-2-font);
+    color: var(--color-on-surface);
+}
+
+h3 {
+    font-size: var(--average-font);
+    color: var(--color-on-surface);
+}
+
+h4 {
+    font-size: var(--medium-2-font);
+    color: var(--color-on-surface);
+}
+
+button.primary{
+    background: var(--color-primary);
+    border-radius: 4px;
+    color: var(--color-on-primary);
+    border: none;
+    border: 1px solid var(--color-primary);
+    font-size: var(--medium-font);
+    padding: 0.6em 1.2em;
+    
+}
+
+a{
+    color: var(--color-on-surface);
+    text-decoration: none;
+}
+
+button.primary-outline{
+    background: transparent;
+    border-radius: 4px;
+    color: var(--color-primary);
+    border: none;
+    border: 1px solid var(--color-primary);
+    font-size: var(--medium-font);
+    padding: 0.6em 1.2em;
+}
+
+button.icon-button{
+    background-color: transparent;
+    border: none;
+    fill: var(--color-on-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.icon-button svg{
+    fill: inherit;
+}
+
 
 
 
@@ -58,9 +131,3 @@ h2 {
         --page-margin: 12px;
     }
 } */
-
-
-
-
-
-
