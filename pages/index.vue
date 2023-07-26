@@ -4,6 +4,8 @@
 <template>
     <Header></Header>
     <HomeLanding></HomeLanding>
+
+    <!-- ------------ about section -------------- -->
     <section class="about">
         <div class="page">
             <img src="../public/images/tea.png" alt="tea">
@@ -30,6 +32,9 @@
 
         </div>
     </section>
+
+
+
 </template>
 <style scoped>
 /* ------------------ about section ---------------- */
@@ -43,7 +48,8 @@
     grid-template-columns: 1fr 2fr;
     gap: 3rem;
     align-items: center;
-    margin: 4rem 0;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 
 }
 
@@ -59,7 +65,7 @@
 }
 
 .about .page>img {
-    width: 100%;
+    width: 80%;
 }
 
 .about h2{
