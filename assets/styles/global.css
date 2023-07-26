@@ -1,0 +1,66 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lora';
+}
+
+:root {
+    --max-page-width: 1280px;
+    /* --page-margin: 24px;
+    --default-border-radius: 4px;
+    --border-radius-medium: 8px;
+    --color-primary: #448bd2;
+    --color-primary-light: #448bd215;
+    --color-primary-dark: #337ac2;
+    --color-primary-variant: #D33396;
+    --color-primary-variant-dark: #b10b71;
+    --color-error: rgb(245, 76, 76);
+    --color-success: rgb(53, 184, 107);
+    --color-primary-variant-light: #d3339621;
+    --color-tertiary: #6F40BD;
+    --color-secondary: White;
+    --color-on-secondary: #210053b6;
+    --surface-color: #F5F5F5;
+    --surface-variant-color: #ffffff;
+    --surface-dark-color: #e0e0e0; */
+
+
+
+    --big-2-font: 28px;
+    --big-font: 24px;
+    --average-font: 20px;
+    --medium-font: 16px;
+    --medium-2-font: 18px;
+    --small-font: 12px;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: var(--big-font);
+}
+
+
+
+/* 
+@media only screen and (max-width: 700px) {
+    :root {
+        --page-margin: 12px;
+    }
+} */
+
+
+
+
+
+
