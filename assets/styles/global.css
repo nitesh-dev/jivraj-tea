@@ -89,7 +89,6 @@ body {
     --medium-2-font: 18px;
     --small-font: 12px;
 
-    font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -103,17 +102,16 @@ body {
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.4;
+    color: var(--color-on-surface-variant);
+    margin: 1em 0;
 }
 
 h1,
 h2,
 h3,
-h4,
-p {
+h4{
     color: var(--color-on-surface);
-    margin: 1em 0;
+    
 }
 
 p, a, span{
