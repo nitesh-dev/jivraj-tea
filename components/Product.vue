@@ -58,6 +58,7 @@
     height: 280px;
     background-color: var(--color-surface-variant);
     position: relative;
+    min-width: 220px;
 }
 
 .product .card {
