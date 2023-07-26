@@ -3,6 +3,7 @@
 </script>
 <template>
     <Header></Header>
+    <HomeLanding></HomeLanding>
 
 </template>
 <style scoped>

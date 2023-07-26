@@ -49,6 +49,9 @@ header {
     background-color: var(--color-surface);
     width: 100%;
     height: 60px;
+    position: sticky;
+    z-index: 100;
+    top: 0;
 }
 
 header .page {

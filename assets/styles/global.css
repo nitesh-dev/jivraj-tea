@@ -59,28 +59,28 @@ body {
 
 p {
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.4;    
 }
 
+h1,h2,h3,h4,p{
+    color: var(--color-on-surface);
+    margin: 1em 0;
+}
 
 h1 {
     font-size: var(--big-font);
-    color: var(--color-on-surface);
 }
 
 h2 {
     font-size: var(--average-2-font);
-    color: var(--color-on-surface);
 }
 
 h3 {
     font-size: var(--average-font);
-    color: var(--color-on-surface);
 }
 
 h4 {
     font-size: var(--medium-2-font);
-    color: var(--color-on-surface);
 }
 
 button.primary{
