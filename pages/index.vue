@@ -38,6 +38,7 @@
     <Gallery></Gallery>
     <Blogs></Blogs>
     <ContactUs></ContactUs>
+    <Footer></Footer>
 
 
 
