@@ -79,7 +79,7 @@
     }
 
     .about .page>img {
-        width: 100%;
+        width: 80%;
         max-width: 400px;
     }
 }
