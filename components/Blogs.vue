@@ -1,4 +1,16 @@
 <script setup lang='ts'>
+
+const scrollContainer = ref<HTMLDivElement>()
+
+function scrollLeft(){
+    if(scrollContainer.value == undefined) return
+    scrollContainer.value.scrollLeft = 0
+}
+
+function scrollRight(){
+    if(scrollContainer.value == undefined) return
+    scrollContainer.value.scrollLeft = scrollContainer.value.scrollWidth
+}
 </script>
 <template>
     <section class="blogs">
@@ -7,13 +19,13 @@
             <div class="heading">
                 <h2>Stay Informed Through Our Blog</h2>
                 <div class="slider">
-                    <button class="icon-button">
+                    <button @click="scrollLeft" class="icon-button">
                         <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="m4.296 12 8.492-8.727a.75.75 0 1 0-1.075-1.046l-9 9.25a.75.75 0 0 0 0 1.046l9 9.25a.75.75 0 1 0 1.075-1.046L4.295 12Z" />
                         </svg>
                     </button>
-                    <button class="icon-button">
+                    <button @click="scrollRight" class="icon-button">
                         <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="m19.704 12-8.492-8.727a.75.75 0 1 1 1.075-1.046l9 9.25a.75.75 0 0 1 0 1.046l-9 9.25a.75.75 0 1 1-1.075-1.046L19.705 12Z" />
@@ -22,7 +34,7 @@
                 </div>
             </div>
 
-            <div class="blogs-container hide-scroll">
+            <div ref="scrollContainer" class="blogs-container hide-scroll">
                 <div>
                     <div class="card" v-for="item in 10">
                         <div>
@@ -105,6 +117,7 @@
 .blogs .blogs-container {
     margin: 2rem 0;
     overflow: auto;
+    scroll-behavior: smooth;
 }
 
 .blogs .blogs-container>div {
