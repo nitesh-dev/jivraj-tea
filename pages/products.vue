@@ -1,19 +1,15 @@
 <script setup lang='ts'>
-
 </script>
 <template>
-    <Header url="/"></Header>
-    <HomeLanding></HomeLanding>
+    <Header url="products"></Header>
+    <OtherLanding name="About Us"></OtherLanding>
     <About></About>
-    <Products></Products>
     <Testimonial></Testimonial>
     <Gallery></Gallery>
     <Blogs></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>
-
-
-
 </template>
 <style scoped>
+
 </style>

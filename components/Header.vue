@@ -1,4 +1,7 @@
 <script setup lang='ts'>
+defineProps<{
+    url: String
+}>()
 </script>
 <template>
     <header>
@@ -7,17 +10,39 @@
                 <img src="../public/images/icon.png" alt="icon">
             </div>
             <div class="center">
-                <div class="active">
-                    <a href="#">Home</a>
+                <div  :class="{'active' : url == '/'}">
+                    <NuxtLink to="/">Home</NuxtLink>
+                    <span></span>
+                </div>
+                <div :class="{'active' : url == 'about'}">
+                    <NuxtLink to="/about">About Us</NuxtLink>
                     <span></span>
                 </div>
 
-                <a href="#">About Us</a>
-                <a href="#">Products</a>
-                <a href="#">Reviews</a>
-                <a href="#">Gallery</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact Us</a>
+                <div :class="{'active' : url == 'products'}">
+                    <NuxtLink to="products">Products</NuxtLink>
+                    <span></span>
+                </div>
+
+                <div :class="{'active' : url == 'reviews'}">
+                    <NuxtLink to="reviews">Reviews</NuxtLink>
+                    <span></span>
+                </div>
+
+                <div :class="{'active' : url == 'gallery'}">
+                    <NuxtLink to="/gallery">Gallery</NuxtLink>
+                    <span></span>
+                </div>
+
+                <div :class="{'active' : url == 'blog'}">
+                    <NuxtLink to="/blog">Blog</NuxtLink>
+                    <span></span>
+                </div>
+
+                <div :class="{'active' : url == 'contact'}">
+                    <NuxtLink to="contact">Contact Us</NuxtLink>
+                    <span></span>
+                </div>
             </div>
 
             <div class="right">
