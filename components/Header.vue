@@ -96,7 +96,7 @@ function toggleNav(){
                 </button>
             </div>
         </div>
-        <div ref="navContainer" class="nav-container show">
+        <div ref="navContainer" class="nav-container">
             <div class="nav-background" @click="toggleNav()"></div>
             <div class="nav">
                 <NuxtLink to="/">Home</NuxtLink>
@@ -245,7 +245,7 @@ header .nav-background{
 }
 
 header .nav{
-    width: 300px;
+    width: 250px;
     height: 100vh;
     position: fixed;
     z-index: 200;
