@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <div class="blogs-container">
+            <div class="blogs-container hide-scroll">
                 <div>
                     <div class="card" v-for="item in 10">
                         <div>
@@ -103,12 +103,13 @@
 }
 
 .blogs .blogs-container {
-    overflow-x: hidden;
     margin: 2rem 0;
+    overflow: auto;
 }
 
 .blogs .blogs-container>div {
     display: flex;
+    
 }
 
 

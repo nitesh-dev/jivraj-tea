@@ -19,7 +19,7 @@
             </div>
             <div class="right">
                 <div class="testimonial-container">
-                    <div class="container">
+                    <div class="container hide-scroll">
                         <div class="card" v-for="card, index in 8">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                                 been
@@ -58,6 +58,7 @@
 }
 
 .testimonial>div {
+    position: relative;
     display: grid;
     grid-template-columns: 30% 70%;
     align-items: center;
@@ -65,6 +66,7 @@
 
 .testimonial .left{
     margin-right: 2rem;
+    widows: 100%;
 }
 .testimonial .left h3 {
     margin: 0;
@@ -86,10 +88,14 @@
 /* ---------------- right part ---------- */
 
 .testimonial .testimonial-container{
-    overflow: hidden;
+    width: 100%;
+}
 
+.testimonial .right{
+    width: 100%;
 }
 .testimonial .right .container {
+    overflow: auto;
     display: flex;
     gap: 0.8rem;
     padding: 1rem;

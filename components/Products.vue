@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div class="products-container">
+            <div class="products-container hide-scroll">
                 <Product v-for="item in 10"></Product>
             </div>
             <button class="primary">
@@ -57,12 +57,10 @@
 .products .products-container {
     overflow-x: auto;
     margin: 2rem 0;
-}
-
-.products .products-container {
     display: flex;
     gap: 12px;
 }
+
 
 .products button {
     margin: auto;
