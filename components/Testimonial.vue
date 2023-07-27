@@ -51,15 +51,15 @@ const activeDotIndex = ref(0)
 let childWidth = 0
 
 
-onMounted(function(){
+onMounted(function () {
     onResize()
     document.body.onresize = onResize
     scrollContainer.value!!.onscroll = onScroll
 })
 
 
-function onResize(){
-    if(scrollContainer.value!!.children.length == 0) return
+function onResize() {
+    if (scrollContainer.value!!.children.length == 0) return
     childWidth = scrollContainer.value!!.firstElementChild!!.clientWidth
 
     // calculating dots count
@@ -67,7 +67,7 @@ function onResize(){
 
 }
 
-function onScroll(event: any){
+function onScroll(event: any) {
     activeDotIndex.value = Math.floor(scrollContainer.value!!.scrollLeft / childWidth)
 }
 
@@ -109,7 +109,7 @@ function onScroll(event: any){
                     </div>
                 </div>
                 <div class="dots">
-                    <span :class="{'active': activeDotIndex == index}" v-for="item, index in dotsCount" :key="index"></span>
+                    <span :class="{ 'active': activeDotIndex == index }" v-for="item, index in dotsCount" :key="index"></span>
                 </div>
             </div>
 
@@ -176,7 +176,7 @@ function onScroll(event: any){
     width: 280px;
 }
 
-.testimonial .card>div{
+.testimonial .card>div {
     background-color: white;
     box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.07);
     padding: 12px;
@@ -237,4 +237,38 @@ function onScroll(event: any){
 .testimonial .right .dots span.active {
     background-color: var(--color-primary);
     width: 20px;
-}</style>
+}
+
+@media only screen and (max-width: 900px) {
+    .testimonial>div {
+        grid-template-columns: 40% 60%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .testimonial>div {
+        grid-template-columns: 100%;
+    }
+
+    .testimonial .left{
+        margin-right: 0;
+    }
+
+    .testimonial{
+        padding-top: 2rem;
+    }
+
+    .testimonial .left h4, .testimonial .left h3, .testimonial .left p{
+        text-align: center;
+    }
+
+    .testimonial .left img{
+        position: absolute;
+        right: 1rem;
+    }
+
+    .testimonial .left button{
+        margin: auto;
+    }
+}
+</style>

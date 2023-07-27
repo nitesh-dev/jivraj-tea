@@ -64,11 +64,11 @@
     left: -100px;
     top: 50%;
     transform: translateY(-50%);
-    width: 100%;
+    width: 110%;
     box-shadow: 0px 8px 28px 0px rgba(0, 0, 0, 0.14);
 }
 
-.contact-us .form-holder{
+.contact-us .form-holder {
     position: relative;
 }
 
@@ -100,13 +100,35 @@
     width: 100%;
 }
 
-.contact-us textarea{
+.contact-us textarea {
     margin-top: 0.6rem;
     resize: none;
 }
 
-.contact-us button{
+.contact-us button {
     margin-top: 1rem;
     width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .contact-us form {
+        width: 120%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .contact-us form {
+        width: 100%;
+    }
+
+    .contact-us .page {
+        grid-template-columns: 100%;
+    }
+
+    .contact-us form {
+        position: static;
+        transform: translateY(0);
+    }
+
 }
 </style>

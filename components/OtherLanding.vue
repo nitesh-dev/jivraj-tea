@@ -45,4 +45,14 @@ defineProps<{
     color: white;
     font-weight: normal;
 }
+
+@media only screen and (max-width: 800px) {
+    .other-landing img {
+        height: 80%;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        right: 2rem;
+    }
+}
 </style>

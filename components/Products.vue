@@ -156,4 +156,10 @@ function scrollRight(){
     background-color: var(--color-primary);
     fill: white;
 }
+
+@media only screen and (max-width: 600px){
+    .products .heading .slider{
+        display: none;
+    }
+}
 </style>

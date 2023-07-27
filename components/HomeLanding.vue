@@ -76,4 +76,22 @@
 .landing h1 {
     margin: 0;
 }
+
+
+@media only screen and (max-width: 900px) {
+    .landing>img {
+        top: unset;
+        bottom: 0;
+        transform: translateY(0);
+        height: 60%;
+        right: 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .landing>img {
+        height: 50%;
+        right: 1rem;
+    }
+}
 </style>

@@ -32,13 +32,13 @@
             <div class="links">
                 <h4>Quick Links</h4>
                 <div>
-                    <a href="#">Home</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Products</a>
-                    <a href="#">Reviews</a>
-                    <a href="#">Gallery</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Contact Us</a>
+                    <NuxtLink to="/">Home</NuxtLink>
+                    <NuxtLink to="/about">About Us</NuxtLink>
+                    <NuxtLink to="/products">Products</NuxtLink>
+                    <NuxtLink to="/reviews">Reviews</NuxtLink>
+                    <NuxtLink to="/gallery">Gallery</NuxtLink>
+                    <NuxtLink to="/blog">Blog</NuxtLink>
+                    <NuxtLink to="/contact">Contact Us</NuxtLink>
                 </div>
             </div>
 
@@ -127,19 +127,32 @@ footer input {
     color: rgba(255, 255, 255, 0.596);
 }
 
-footer button{
+footer button {
     width: 100%;
     padding: 0;
     margin-top: 1rem;
     border-radius: 0;
 }
 
-footer>p{
+footer>p {
     margin-top: 4rem;
     text-align: center;
     border-top: 1px solid rgb(58, 58, 58);
     padding: 2em 0;
     font-size: var(--small-font);
     color: rgba(255, 255, 255, 0.418);
+}
+
+
+@media only screen and (max-width: 900px) {
+    footer .page {
+        grid-template-columns: 100%;
+    }
+
+    footer img {
+        width: 100%;
+        max-width: 200px;
+        margin: auto;
+    }
 }
 </style>

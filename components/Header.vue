@@ -5,41 +5,41 @@ defineProps<{
 </script>
 <template>
     <header>
-        <div class="page">
+        <div class="page desktop">
             <div class="image-holder">
                 <img src="../public/images/icon.png" alt="icon">
             </div>
             <div class="center">
-                <div  :class="{'active' : url == '/'}">
+                <div :class="{ 'active': url == '/' }">
                     <NuxtLink to="/">Home</NuxtLink>
                     <span></span>
                 </div>
-                <div :class="{'active' : url == 'about'}">
+                <div :class="{ 'active': url == 'about' }">
                     <NuxtLink to="/about">About Us</NuxtLink>
                     <span></span>
                 </div>
 
-                <div :class="{'active' : url == 'products'}">
+                <div :class="{ 'active': url == 'products' }">
                     <NuxtLink to="products">Products</NuxtLink>
                     <span></span>
                 </div>
 
-                <div :class="{'active' : url == 'reviews'}">
+                <div :class="{ 'active': url == 'reviews' }">
                     <NuxtLink to="reviews">Reviews</NuxtLink>
                     <span></span>
                 </div>
 
-                <div :class="{'active' : url == 'gallery'}">
+                <div :class="{ 'active': url == 'gallery' }">
                     <NuxtLink to="/gallery">Gallery</NuxtLink>
                     <span></span>
                 </div>
 
-                <div :class="{'active' : url == 'blog'}">
+                <div :class="{ 'active': url == 'blog' }">
                     <NuxtLink to="/blog">Blog</NuxtLink>
                     <span></span>
                 </div>
 
-                <div :class="{'active' : url == 'contact'}">
+                <div :class="{ 'active': url == 'contact' }">
                     <NuxtLink to="contact">Contact Us</NuxtLink>
                     <span></span>
                 </div>
@@ -67,9 +67,20 @@ defineProps<{
                 </div>
             </div>
         </div>
+
+        <div class="page phone">
+            <div class="image-holder">
+                <img src="../public/images/icon.png" alt="icon">
+            </div>
+        </div>
     </header>
 </template>
 <style scoped>
+
+.phone{
+    display: none;
+}
+
 header {
     background-color: var(--color-surface);
     width: 100%;
@@ -102,16 +113,16 @@ header img {
 
 
 
-header .center{
+header .center {
     display: flex;
     gap: 1em;
 }
 
-header .center div{
+header .center div {
     position: relative;
 }
 
-header .center span{
+header .center span {
     position: absolute;
     width: 20px;
     height: 2px;
@@ -121,29 +132,29 @@ header .center span{
     transform: translateX(-50%);
 }
 
-header .center .active a{
+header .center .active a {
     color: var(--color-primary);
 }
 
-header .center .active span{
+header .center .active span {
     background-color: var(--color-primary);
 }
 
 
 
 
-header .right{
+header .right {
     display: flex;
     gap: 1rem;
 }
 
-header .cart{
+header .cart {
     display: flex;
     align-items: center;
 }
 
 
-header .cart span{
+header .cart span {
     display: block;
     width: 1px;
     background-color: rgb(202, 202, 202);
@@ -151,8 +162,20 @@ header .cart span{
     margin: 0 8px;
 }
 
-header .auth{
+header .auth {
     display: flex;
     gap: 0.4rem;
+}
+
+
+
+@media only screen and (max-width: 950px) {
+    .desktop {
+        display: none !important;
+    }
+
+    .phone {
+        display: block;
+    }
 }
 </style>

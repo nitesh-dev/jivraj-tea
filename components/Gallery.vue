@@ -31,6 +31,7 @@
 </template>
 <style scoped>
 .gallery {
+    margin: 4rem 0;
     min-height: 600px;
 }
 
@@ -59,7 +60,17 @@
     gap: 0.6rem;
 }
 
-.gallery button{
+.gallery button {
     margin: 2rem auto;
+}
+
+@media only screen and (max-width: 700px) {
+    .gallery .gallery-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery .gallery-container div:last-child {
+        display: none;
+    }
 }
 </style>

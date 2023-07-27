@@ -58,13 +58,13 @@ const blogs = ref([
 ])
 const scrollContainer = ref<HTMLDivElement>()
 
-function scrollLeft(){
-    if(scrollContainer.value == undefined) return
+function scrollLeft() {
+    if (scrollContainer.value == undefined) return
     scrollContainer.value.scrollLeft = 0
 }
 
-function scrollRight(){
-    if(scrollContainer.value == undefined) return
+function scrollRight() {
+    if (scrollContainer.value == undefined) return
     scrollContainer.value.scrollLeft = scrollContainer.value.scrollWidth
 }
 </script>
@@ -178,7 +178,7 @@ function scrollRight(){
 
 .blogs .blogs-container>div {
     display: flex;
-    
+
 }
 
 
@@ -239,5 +239,16 @@ function scrollRight(){
 .blogs svg {
     fill: var(--color-primary);
     width: 16px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .blogs .heading .slider {
+        display: none;
+    }
+
+    .blogs h2, .blogs h4 {
+        text-align: center;
+    }
 }
 </style>

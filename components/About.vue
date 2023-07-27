@@ -57,6 +57,8 @@
 
 .about .page>img {
     width: 80%;
+    display: block;
+    margin: auto;
 }
 
 .about h2 {
@@ -67,5 +69,18 @@
 .about h4 {
     margin-bottom: 0.4em;
     color: var(--color-primary);
+}
+
+@media only screen and (max-width: 800px) {
+    .about .page {
+        grid-template-columns: 100%;
+        gap: 0;
+        justify-content: center;
+    }
+
+    .about .page>img {
+        width: 100%;
+        max-width: 400px;
+    }
 }
 </style>
