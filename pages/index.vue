@@ -37,6 +37,7 @@
     <Testimonial></Testimonial>
     <Gallery></Gallery>
     <Blogs></Blogs>
+    <ContactUs></ContactUs>
 
 
 
