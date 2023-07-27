@@ -62,26 +62,6 @@ body {
     --color-on-surface: #333;
     --color-on-surface-variant: #7F7F7F;
 
-    /* --page-margin: 24px;
-    --default-border-radius: 4px;
-    --border-radius-medium: 8px;
-    --color-primary: #448bd2;
-    --color-primary-light: #448bd215;
-    --color-primary-dark: #337ac2;
-    --color-primary-variant: #D33396;
-    --color-primary-variant-dark: #b10b71;
-    --color-error: rgb(245, 76, 76);
-    --color-success: rgb(53, 184, 107);
-    --color-primary-variant-light: #d3339621;
-    --color-tertiary: #6F40BD;
-    --color-secondary: White;
-    --color-on-secondary: #210053b6;
-    --surface-color: #F5F5F5;
-    --surface-variant-color: #ffffff;
-    --surface-dark-color: #e0e0e0; */
-
-
-
     --big-font: 42px;
     --average-2-font: 24px;
     --average-font: 20px;
@@ -111,6 +91,7 @@ h2,
 h3,
 h4 {
     color: var(--color-on-surface);
+    font-weight: normal;
 
 }
 
@@ -208,6 +189,19 @@ button.icon-button svg {
     .page {
         padding: 0 16px;
     }
+
+    h1 {
+        font-size: calc(var(--big-font) - 8px);
+    }
+    
+    h2 {
+        font-size: calc(var(--average-2-font) - 2px);
+    }
+    
+    h3 {
+        font-size: calc(var(--average-font) - 2px);
+    }
+    
 }
 
 @media only screen and (max-width: 600px) {
