@@ -41,7 +41,7 @@ const data = ref([
         role: 'CUSTOMER',
         url: profile3
     }
-    
+
 ])
 
 </script>
@@ -66,15 +66,17 @@ const data = ref([
                 <div class="testimonial-container">
                     <div class="container hide-scroll">
                         <div class="card" v-for="item, index in data">
-                            <p>{{ item.message }}</p>
-                            <hr>
-                            <div class="detail">
-                                <img :src="item.url" alt="profile icon">
-                                <div>
-                                    <p>{{ item.name }}</p>
-                                    <span>{{ item.role }}</span>
+                            <div>
+                                <p>{{ item.message }}</p>
+                                <hr>
+                                <div class="detail">
+                                    <img :src="item.url" alt="profile icon">
+                                    <div>
+                                        <p>{{ item.name }}</p>
+                                        <span>{{ item.role }}</span>
+                                    </div>
+                                    <h4>#0{{ index + 1 }}</h4>
                                 </div>
-                                <h4>#0{{ index + 1 }}</h4>
                             </div>
                         </div>
                     </div>
@@ -97,6 +99,7 @@ const data = ref([
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
 }
 
 .testimonial>div {
@@ -106,10 +109,11 @@ const data = ref([
     align-items: center;
 }
 
-.testimonial .left{
+.testimonial .left {
     margin-right: 2rem;
     widows: 100%;
 }
+
 .testimonial .left h3 {
     margin: 0;
 }
@@ -129,13 +133,14 @@ const data = ref([
 
 /* ---------------- right part ---------- */
 
-.testimonial .testimonial-container{
+.testimonial .testimonial-container {
     width: 100%;
 }
 
-.testimonial .right{
+.testimonial .right {
     width: 100%;
 }
+
 .testimonial .right .container {
     overflow: auto;
     display: flex;
@@ -144,8 +149,11 @@ const data = ref([
 }
 
 .testimonial .card {
-    min-width: 250px;
-    width: 250px;
+    min-width: 280px;
+    width: 280px;
+}
+
+.testimonial .card>div{
     background-color: white;
     box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.07);
     padding: 12px;
@@ -188,11 +196,12 @@ const data = ref([
     color: rgb(184, 181, 181);
 }
 
-.testimonial .right .dots{
+.testimonial .right .dots {
     display: flex;
     gap: 8px;
     justify-content: center;
 }
+
 .testimonial .right .dots span {
     display: block;
     width: 8px;
@@ -201,8 +210,7 @@ const data = ref([
     border-radius: 8px;
 }
 
-.testimonial .right .dots span.active{
+.testimonial .right .dots span.active {
     background-color: var(--color-primary);
     width: 20px;
-}
-</style>
+}</style>
