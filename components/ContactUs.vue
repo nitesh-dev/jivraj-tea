@@ -27,6 +27,7 @@
 <style scoped>
 .contact-us {
     position: relative;
+    margin: 4rem 0;
 }
 
 .contact-us>img {
