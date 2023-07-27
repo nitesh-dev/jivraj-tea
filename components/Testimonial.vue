@@ -44,6 +44,33 @@ const data = ref([
 
 ])
 
+
+const scrollContainer = ref<HTMLDivElement>()
+const dotsCount = ref(0)
+const activeDotIndex = ref(0)
+let childWidth = 0
+
+
+onMounted(function(){
+    onResize()
+    document.body.onresize = onResize
+    scrollContainer.value!!.onscroll = onScroll
+})
+
+
+function onResize(){
+    if(scrollContainer.value!!.children.length == 0) return
+    childWidth = scrollContainer.value!!.firstElementChild!!.clientWidth
+
+    // calculating dots count
+    dotsCount.value = scrollContainer.value!!.childElementCount - Math.floor(scrollContainer.value!!.clientWidth / childWidth)
+
+}
+
+function onScroll(event: any){
+    activeDotIndex.value = Math.floor(scrollContainer.value!!.scrollLeft / childWidth)
+}
+
 </script>
 <template>
     <section class="testimonial">
@@ -64,7 +91,7 @@ const data = ref([
             </div>
             <div class="right">
                 <div class="testimonial-container">
-                    <div class="container hide-scroll">
+                    <div ref="scrollContainer" class="container hide-scroll">
                         <div class="card" v-for="item, index in data">
                             <div>
                                 <p>{{ item.message }}</p>
@@ -82,10 +109,7 @@ const data = ref([
                     </div>
                 </div>
                 <div class="dots">
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span :class="{'active': activeDotIndex == index}" v-for="item, index in dotsCount" :key="index"></span>
                 </div>
             </div>
 
@@ -143,7 +167,7 @@ const data = ref([
 .testimonial .right .container {
     overflow: auto;
     display: flex;
-    padding: 1rem;
+    padding: 1rem 0;
 
 }
 
@@ -156,7 +180,7 @@ const data = ref([
     background-color: white;
     box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.07);
     padding: 12px;
-    margin-right: 12px;
+    margin: 0 6px;
 }
 
 .testimonial .card hr {
@@ -207,6 +231,7 @@ const data = ref([
     height: 8px;
     background-color: rgb(202, 202, 202);
     border-radius: 8px;
+    transition: all 300ms;
 }
 
 .testimonial .right .dots span.active {
