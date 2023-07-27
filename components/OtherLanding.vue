@@ -1,11 +1,15 @@
 <script setup lang='ts'>
+defineProps<{
+    name: String
+}>()
+
 </script>
 <template>
     <section class="other-landing">
         <div>
             <img src="../public/images/tea-outline.png">
             <div class="page">
-                <h1>About Us</h1>
+                <h1>{{ name }}</h1>
             </div>
         </div>
     </section>
@@ -18,26 +22,26 @@
     background-size: cover;
 }
 
-.other-landing>div{
+.other-landing>div {
     height: 200px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
-.other-landing img{
+.other-landing img {
     height: 110%;
     position: absolute;
     left: -50px;
 }
 
-.other-landing .page{
+.other-landing .page {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-.other-landing h1{
+.other-landing h1 {
     color: white;
     font-weight: normal;
 }

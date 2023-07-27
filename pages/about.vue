@@ -2,7 +2,7 @@
 </script>
 <template>
     <Header></Header>
-    <OtherLanding></OtherLanding>
+    <OtherLanding name="About Us"></OtherLanding>
     <About></About>
     <Testimonial></Testimonial>
     <Gallery></Gallery>
