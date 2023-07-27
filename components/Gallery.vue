@@ -32,7 +32,7 @@
 <style scoped>
 .gallery {
     margin: 4rem 0;
-    min-height: 600px;
+    min-height: 400px;
 }
 
 .gallery h4 {
