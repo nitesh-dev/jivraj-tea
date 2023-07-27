@@ -1,6 +1,53 @@
 <script setup lang='ts'>
 
+import product1 from '@/public/images/products/product1.png'
+import product2 from '@/public/images/products/product2.png'
+import product3 from '@/public/images/products/product3.png'
+import product4 from '@/public/images/products/product4.png'
+
 const scrollContainer = ref<HTMLDivElement>()
+
+const products = ref([
+    {
+        url: product1,
+        name: 'JIVRAJ CTC',
+        price: '₹49.00 - ₹465.00'
+    },
+    {
+        url: product2,
+        name: 'JIVRAJ DUST',
+        price: '₹110.00 - ₹430.00'
+    },
+    {
+        url: product3,
+        name: 'JIVRAJ SAMAARA BOX',
+        price: '₹49.00 - ₹465.00'
+    },
+    {
+        url: product4,
+        name: 'JIVRAJ PREMIUM GREEN TEA',
+        price: '₹200.00'
+    },{
+        url: product1,
+        name: 'JIVRAJ CTC',
+        price: '₹49.00 - ₹465.00'
+    },
+    {
+        url: product2,
+        name: 'JIVRAJ DUST',
+        price: '₹110.00 - ₹430.00'
+    },
+    {
+        url: product3,
+        name: 'JIVRAJ SAMAARA BOX',
+        price: '₹49.00 - ₹465.00'
+    },
+    {
+        url: product4,
+        name: 'JIVRAJ PREMIUM GREEN TEA',
+        price: '₹200.00'
+    }
+])
 
 function scrollLeft(){
     if(scrollContainer.value == undefined) return
@@ -37,7 +84,7 @@ function scrollRight(){
             </div>
 
             <div ref="scrollContainer" class="products-container hide-scroll">
-                <Product v-for="item in 10"></Product>
+                <Product v-for="item in products" :url="item.url" :name="item.name" :price="item.price"></Product>
             </div>
             <button class="primary">
                 <span>View All Products</span>

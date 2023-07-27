@@ -1,4 +1,9 @@
 <script setup lang='ts'>
+defineProps<{
+    url: string,
+    name: string,
+    price: string
+}>()
 </script>
 <template>
     <div class="product">
@@ -35,7 +40,7 @@
         </div>
         <div class="card">
             <div class="image-holder">
-                <img src="../public/images/products/product1.png">
+                <img :src="url">
             </div>
             <div class="detail">
                 <div class="rating">
@@ -45,8 +50,8 @@
                             d="M10.788 3.103c.495-1.004 1.926-1.004 2.421 0l2.358 4.777 5.273.766c1.107.161 1.549 1.522.748 2.303l-3.816 3.72.901 5.25c.19 1.103-.968 1.944-1.959 1.424l-4.716-2.48-4.715 2.48c-.99.52-2.148-.32-1.96-1.424l.901-5.25-3.815-3.72c-.801-.78-.359-2.142.748-2.303L8.43 7.88l2.358-4.777Z" />
                     </svg>
                 </div>
-                <p>JIVRAJ CTC</p>
-                <span>₹49.00 - ₹465.00</span>
+                <p>{{ name }}</p>
+                <span>{{ price }}</span>
             </div>
 
         </div>
