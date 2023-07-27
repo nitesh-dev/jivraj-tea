@@ -1,5 +1,61 @@
 <script setup lang='ts'>
 
+import blog1 from '@/public/images/blogs/blog1.png'
+import blog2 from '@/public/images/blogs/blog2.png'
+import blog3 from '@/public/images/blogs/blog3.png'
+import blog4 from '@/public/images/blogs/blog4.png'
+
+const blogs = ref([
+    {
+        url: blog1,
+        loc: 'Jivraj Tea',
+        name: 'Lorem Ipsum is simply dummy text of the printing.',
+        date: '10.05.2021'
+    },
+    {
+        url: blog2,
+        loc: 'Jivraj Tea',
+        name: 'Lorem Ipsum is simply dummy text of the printing.',
+        date: '10.05.2021'
+    },
+    {
+        url: blog3,
+        loc: 'Jivraj Tea',
+        name: 'Lorem Ipsum is simply dummy text of the printing.',
+        date: '10.05.2021'
+    },
+    {
+        url: blog4,
+        loc: 'Jivraj Tea',
+        name: 'Lorem Ipsum is simply dummy text of the printing.',
+        date: '10.05.2021'
+    },
+    {
+        url: blog1,
+        loc: 'Jivraj Tea',
+        name: 'Lorem Ipsum is simply dummy text of the printing.',
+        date: '10.05.2021'
+    },
+    {
+        url: blog2,
+        loc: 'Jivraj Tea',
+        name: 'Lorem Ipsum is simply dummy text of the printing.',
+        date: '10.05.2021'
+    },
+    {
+        url: blog3,
+        loc: 'Jivraj Tea',
+        name: 'Lorem Ipsum is simply dummy text of the printing.',
+        date: '10.05.2021'
+    },
+    {
+        url: blog4,
+        loc: 'Jivraj Tea',
+        name: 'Lorem Ipsum is simply dummy text of the printing.',
+        date: '10.05.2021'
+    }
+
+])
 const scrollContainer = ref<HTMLDivElement>()
 
 function scrollLeft(){
@@ -36,11 +92,11 @@ function scrollRight(){
 
             <div ref="scrollContainer" class="blogs-container hide-scroll">
                 <div>
-                    <div class="card" v-for="item in 10">
+                    <div class="card" v-for="item in blogs">
                         <div>
-                            <img src="../public/images/blogs/blog1.png" alt="blog1">
-                            <span>IN: Jivraj Tea</span>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            <img :src="item.url" alt="blog1">
+                            <span>IN: {{ item.loc }}</span>
+                            <p>{{ item.name }}</p>
                             <div class="status">
                                 <div>
                                     <svg width="16" height="16" fill="none" viewBox="0 0 24 24"
@@ -48,7 +104,7 @@ function scrollRight(){
                                         <path
                                             d="M6.25 3A3.25 3.25 0 0 0 3 6.25v11.5A3.25 3.25 0 0 0 6.25 21h11.5A3.25 3.25 0 0 0 21 17.75V6.25A3.25 3.25 0 0 0 17.75 3H6.25ZM4.5 8.5h15v9.25a1.75 1.75 0 0 1-1.75 1.75H6.25a1.75 1.75 0 0 1-1.75-1.75V8.5Zm11.75 6a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm-4.25 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm4.25-4a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm-4.25 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm-4.25 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm-1.5-6h11.5c.966 0 1.75.784 1.75 1.75V7h-15v-.75c0-.966.784-1.75 1.75-1.75Z" />
                                     </svg>
-                                    <span>10.05.2021</span>
+                                    <span>{{ item.date }}</span>
                                 </div>
 
                                 <div>
