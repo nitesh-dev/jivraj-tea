@@ -2,8 +2,7 @@
 </script>
 <template>
     <Header url="reviews"></Header>
-    <OtherLanding name="About Us"></OtherLanding>
-    <About></About>
+    <OtherLanding name="Reviews"></OtherLanding>
     <Testimonial></Testimonial>
     <Gallery></Gallery>
     <Blogs></Blogs>
