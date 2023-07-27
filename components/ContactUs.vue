@@ -65,6 +65,7 @@
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
+    box-shadow: 0px 8px 28px 0px rgba(0, 0, 0, 0.14);
 }
 
 .contact-us .form-holder{
