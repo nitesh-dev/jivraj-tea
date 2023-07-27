@@ -99,7 +99,6 @@ const data = ref([
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
 }
 
 .testimonial>div {
