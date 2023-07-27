@@ -1,4 +1,49 @@
 <script setup lang='ts'>
+
+import profile1 from '@/public/images/profiles/profile 1.png'
+import profile2 from '@/public/images/profiles/profile 2.png'
+import profile3 from '@/public/images/profiles/profile 3.png'
+
+const data = ref([
+    {
+        message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: 'Jesiu Petit',
+        role: 'CUSTOMER',
+        url: profile1
+    },
+    {
+        message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: 'James Mango',
+        role: 'CUSTOMER',
+        url: profile2
+    },
+    {
+        message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: 'James Mango',
+        role: 'CUSTOMER',
+        url: profile3
+    },
+    {
+        message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: 'Jesiu Petit',
+        role: 'CUSTOMER',
+        url: profile1
+    },
+    {
+        message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: 'James Mango',
+        role: 'CUSTOMER',
+        url: profile2
+    },
+    {
+        message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        name: 'James Mango',
+        role: 'CUSTOMER',
+        url: profile3
+    }
+    
+])
+
 </script>
 <template>
     <section class="testimonial">
@@ -20,17 +65,14 @@
             <div class="right">
                 <div class="testimonial-container">
                     <div class="container hide-scroll">
-                        <div class="card" v-for="card, index in 8">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been
-                                the industry's standard dummy text ever since the 1500s.
-                            </p>
+                        <div class="card" v-for="item, index in data">
+                            <p>{{ item.message }}</p>
                             <hr>
                             <div class="detail">
-                                <img src="../public/images/profiles/profile 1.png" alt="profile icon">
+                                <img :src="item.url" alt="profile icon">
                                 <div>
-                                    <p>Jesiu Petit</p>
-                                    <span>CUSTOMER</span>
+                                    <p>{{ item.name }}</p>
+                                    <span>{{ item.role }}</span>
                                 </div>
                                 <h4>#0{{ index + 1 }}</h4>
                             </div>
@@ -97,7 +139,6 @@
 .testimonial .right .container {
     overflow: auto;
     display: flex;
-    gap: 0.8rem;
     padding: 1rem;
 
 }
@@ -108,6 +149,7 @@
     background-color: white;
     box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.07);
     padding: 12px;
+    margin-right: 12px;
 }
 
 .testimonial .card hr {
