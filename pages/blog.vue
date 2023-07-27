@@ -2,11 +2,10 @@
 </script>
 <template>
     <Header url="blog"></Header>
-    <OtherLanding name="About Us"></OtherLanding>
-    <About></About>
+    <OtherLanding name="Blogs"></OtherLanding>
+    <Blogs></Blogs>
     <Testimonial></Testimonial>
     <Gallery></Gallery>
-    <Blogs></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>
 </template>
