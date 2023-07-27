@@ -2,8 +2,8 @@
 </script>
 <template>
     <Header url="products"></Header>
-    <OtherLanding name="About Us"></OtherLanding>
-    <About></About>
+    <OtherLanding name="Products"></OtherLanding>
+    <Products></Products>
     <Testimonial></Testimonial>
     <Gallery></Gallery>
     <Blogs></Blogs>
