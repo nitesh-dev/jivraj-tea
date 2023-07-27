@@ -2,10 +2,9 @@
 </script>
 <template>
     <Header url="gallery"></Header>
-    <OtherLanding name="About Us"></OtherLanding>
-    <About></About>
-    <Testimonial></Testimonial>
+    <OtherLanding name="Gallery"></OtherLanding>
     <Gallery></Gallery>
+    <Testimonial></Testimonial>
     <Blogs></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>
