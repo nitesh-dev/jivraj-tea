@@ -1,6 +1,9 @@
 <script setup lang='ts'>
 </script>
 <template>
+    <Head>
+        <Title>Products</Title>
+    </Head>
     <Header url="products"></Header>
     <OtherLanding name="Products"></OtherLanding>
     <Products></Products>
@@ -10,6 +13,4 @@
     <ContactUs></ContactUs>
     <Footer></Footer>
 </template>
-<style scoped>
-
-</style>
+<style scoped></style>

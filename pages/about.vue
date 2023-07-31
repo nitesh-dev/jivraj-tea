@@ -1,6 +1,9 @@
 <script setup lang='ts'>
 </script>
 <template>
+    <Head>
+      <Title>About</Title>
+    </Head>
     <Header url="about"></Header>
     <OtherLanding name="About Us"></OtherLanding>
     <About></About>

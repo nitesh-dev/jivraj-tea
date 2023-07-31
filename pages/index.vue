@@ -2,6 +2,9 @@
 
 </script>
 <template>
+    <Head>
+        <Title>Home</Title>
+    </Head>
     <Header url="/"></Header>
     <HomeLanding></HomeLanding>
     <About></About>
@@ -11,9 +14,5 @@
     <Blogs></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>
-
-
-
 </template>
-<style scoped>
-</style>
+<style scoped></style>
