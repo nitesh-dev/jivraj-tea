@@ -6,9 +6,9 @@
     </Head>
     <Header url="blog"></Header>
     <OtherLanding name="Blogs"></OtherLanding>
-    <Blogs></Blogs>
+    <Blogs :show-border="true"></Blogs>
     <Testimonial></Testimonial>
-    <Gallery></Gallery>
+    <Gallery :show-more="false"></Gallery>
     <ContactUs></ContactUs>
     <Footer></Footer>
 </template>
