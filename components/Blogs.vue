@@ -98,7 +98,7 @@ function scrollRight() {
             <div ref="scrollContainer" class="blogs-container hide-scroll">
                 <div>
                     <div class="card" v-for="item in blogs">
-                        <div :class="{'border': showBorder}">
+                        <div :class="{ 'border': showBorder }">
                             <img :src="item.url" alt="blog1">
                             <span>IN: {{ item.loc }}</span>
                             <p>{{ item.name }}</p>
@@ -199,7 +199,7 @@ function scrollRight() {
     box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.08);
 }
 
-.blogs .card>div.border{
+.blogs .card>div.border {
     border-left: 3px solid var(--color-primary);
 }
 
@@ -256,8 +256,14 @@ function scrollRight() {
         display: none;
     }
 
-    .blogs h2, .blogs h4 {
+    .blogs h2,
+    .blogs h4 {
         text-align: center;
     }
+
+    .blogs .card>div.border {
+        border-left: none;
+    }
+
 }
 </style>
