@@ -8,7 +8,7 @@
     <OtherLanding name="Reviews"></OtherLanding>
     <Testimonial></Testimonial>
     <Gallery></Gallery>
-    <Blogs></Blogs>
+    <Blogs :show-border="true"></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>
 </template>
