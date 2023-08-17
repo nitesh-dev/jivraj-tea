@@ -1,10 +1,37 @@
 <script setup lang='ts'>
+
+defineProps({
+    another: Boolean
+})
 </script>
 <template>
     <section class="contact-us">
-        <img src="../public/images/outlines/leaf-outline2.png">
-        <div class="page">
-            <img src="../public/images/tea-garden-landscape.png" alt="garden">
+        <template v-if="!another">
+            <img src="../public/images/outlines/leaf-outline2.png">
+            <div class="page">
+                <img src="../public/images/tea-garden-landscape.png" alt="garden">
+                <div class="form-holder">
+                    <form>
+                        <h4>Contact With Us</h4>
+                        <h2>Send Your Message Us</h2>
+                        <div class="input-holder">
+                            <input placeholder="Name" type="text">
+                            <input placeholder="Email" type="email">
+                        </div>
+                        <div class="input-holder">
+                            <input placeholder="Phone number" type="text">
+                            <input placeholder="Subject" type="text">
+                        </div>
+                        <textarea rows="4" placeholder="Your Message"></textarea>
+                        <button class="primary" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </template>
+
+        <div v-else class="another page">
+            <img class="desktop" src="../public//images/landscape.jpg">
+            <img class="phone" src="../public//images/landscape2.jpg">
             <div class="form-holder">
                 <form>
                     <h4>Contact With Us</h4>
@@ -21,7 +48,9 @@
                     <button class="primary" type="submit">Submit</button>
                 </form>
             </div>
+
         </div>
+
     </section>
 </template>
 <style scoped>
@@ -39,13 +68,20 @@
     z-index: -1;
 }
 
-
-
 .contact-us .page {
     display: grid;
     grid-template-columns: 50% 50%;
     min-height: 500px;
 }
+
+.contact-us .page.another {
+    display: block;
+    grid-template-columns: unset;
+    min-height: 500px;
+    position: relative;
+    overflow: auto;
+}
+
 
 .contact-us .page img {
     width: 100%;
@@ -68,6 +104,34 @@
     box-shadow: 0px 8px 28px 0px rgba(0, 0, 0, 0.14);
 }
 
+.contact-us img.desktop {
+    display: block;
+}
+
+
+.contact-us img.phone {
+    display: none;
+}
+
+
+/* override */
+.contact-us .another img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.contact-us .another form {
+    position: static;
+    transform: unset;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+
 .contact-us .form-holder {
     position: relative;
 }
@@ -81,6 +145,7 @@
 .contact-us h2 {
     margin: 0;
     margin-bottom: 1em;
+    font-weight: bold;
 }
 
 .contact-us form div {
@@ -114,7 +179,10 @@
     .contact-us form {
         width: 120%;
     }
+
 }
+
+
 
 @media only screen and (max-width: 700px) {
     .contact-us form {
@@ -128,6 +196,28 @@
     .contact-us form {
         position: static;
         transform: translateY(0);
+    }
+
+    .contact-us .another form {
+        transform: unset;
+    }
+
+    .contact-us .another img {
+        position: static;
+    }
+
+    .contact-us .another form {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .contact-us img.desktop {
+        display: none;
+    }
+
+
+    .contact-us img.phone {
+        display: block;
     }
 
 }

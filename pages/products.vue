@@ -10,7 +10,7 @@
     <Testimonial></Testimonial>
     <Gallery :show-more="false"></Gallery>
     <Blogs :show-border="true"></Blogs>
-    <ContactUs></ContactUs>
+    <ContactUs :another="false"></ContactUs>
     <Footer></Footer>
 </template>
 <style scoped></style>

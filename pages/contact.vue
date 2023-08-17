@@ -6,9 +6,9 @@
     </Head>
     <Header url="contact"></Header>
     <OtherLanding name="Contact Us"></OtherLanding>
-    <ContactUs></ContactUs>
-    <Gallery></Gallery>
-    <Blogs></Blogs>
+    <ContactUs :another="true"></ContactUs>
+    <Gallery :show-more="false"></Gallery>
+    <Blogs :show-border="true"></Blogs>
     <Footer></Footer>
 </template>
 <style scoped></style>
