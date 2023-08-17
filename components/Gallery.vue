@@ -38,10 +38,13 @@
 .gallery h4 {
     color: var(--color-primary);
     text-align: center;
+    margin-bottom: 0.5em;
 }
 
 .gallery h2 {
     text-align: center;
+    margin-top: 0;
+    font-weight: bold;
 }
 
 .gallery .gallery-container img {

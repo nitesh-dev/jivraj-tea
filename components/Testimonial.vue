@@ -139,6 +139,7 @@ function onScroll(event: any) {
 
 .testimonial .left h3 {
     margin: 0;
+    font-weight: bold;
 }
 
 .testimonial .left img {
@@ -150,6 +151,7 @@ function onScroll(event: any) {
     margin: 0;
     margin-bottom: 0.8em;
     color: var(--color-primary);
+    font-weight: bold;
 }
 
 
