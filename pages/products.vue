@@ -8,7 +8,7 @@
     <OtherLanding name="Products"></OtherLanding>
     <Products :row-count="3"></Products>
     <Testimonial></Testimonial>
-    <Gallery></Gallery>
+    <Gallery :show-more="false"></Gallery>
     <Blogs :show-border="true"></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>

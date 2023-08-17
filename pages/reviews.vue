@@ -7,7 +7,7 @@
     <Header url="reviews"></Header>
     <OtherLanding name="Reviews"></OtherLanding>
     <Testimonial></Testimonial>
-    <Gallery></Gallery>
+    <Gallery :show-more="false"></Gallery>
     <Blogs :show-border="true"></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>

@@ -1,4 +1,7 @@
 <script setup lang='ts'>
+defineProps<{
+    showMore: boolean
+}>()
 </script>
 <template>
     <section class="gallery">
@@ -19,7 +22,23 @@
                     <img src="../public/images//gallery/gallery_6.png">
                 </div>
             </div>
-            <button class="primary">
+
+            <div v-if="showMore" class="gallery-container">
+                <div>
+                    <img src="../public/images//gallery/gallery_7.jpg">
+                    <img src="../public/images//gallery/gallery_9.jpg">
+                </div>
+                <div>
+                    <img src="../public/images//gallery/gallery_10.jpg">
+                    <img src="../public/images//gallery/gallery_8.jpg">
+                </div>
+                <div>
+                    <img src="../public/images//gallery/gallery_11.jpg">
+                    <img src="../public/images//gallery/gallery_12.jpg">
+                </div>
+            </div>
+
+            <button v-if="!showMore" class="primary">
                 <span>View More</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -55,6 +74,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0.6rem;
+    margin-bottom: 0.6rem;
 }
 
 .gallery .gallery-container div {

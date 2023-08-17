@@ -10,7 +10,7 @@
     <About :full="false"></About>
     <Products :row-count="1"></Products>
     <Testimonial></Testimonial>
-    <Gallery></Gallery>
+    <Gallery :show-more="false"></Gallery>
     <Blogs :show-border="false"></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>

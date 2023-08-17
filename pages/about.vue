@@ -8,7 +8,7 @@
     <OtherLanding name="About Us"></OtherLanding>
     <About :full="true"></About>
     <Testimonial></Testimonial>
-    <Gallery></Gallery>
+    <Gallery :show-more="false"></Gallery>
     <Blogs :show-border="true"></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>
