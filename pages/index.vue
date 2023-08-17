@@ -11,7 +11,7 @@
     <Products></Products>
     <Testimonial></Testimonial>
     <Gallery></Gallery>
-    <Blogs></Blogs>
+    <Blogs :show-border="false"></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>
 </template>

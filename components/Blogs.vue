@@ -5,6 +5,11 @@ import blog2 from '@/public/images/blogs/blog2.png'
 import blog3 from '@/public/images/blogs/blog3.png'
 import blog4 from '@/public/images/blogs/blog4.png'
 
+
+defineProps<{
+    showBorder: boolean
+}>()
+
 const blogs = ref([
     {
         url: blog1,
@@ -93,7 +98,7 @@ function scrollRight() {
             <div ref="scrollContainer" class="blogs-container hide-scroll">
                 <div>
                     <div class="card" v-for="item in blogs">
-                        <div>
+                        <div :class="{'border': showBorder}">
                             <img :src="item.url" alt="blog1">
                             <span>IN: {{ item.loc }}</span>
                             <p>{{ item.name }}</p>
@@ -192,6 +197,10 @@ function scrollRight() {
     padding: 12px;
     background-color: white;
     box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.08);
+}
+
+.blogs .card>div.border{
+    border-left: 3px solid var(--color-primary);
 }
 
 .blogs .card:first-child {
