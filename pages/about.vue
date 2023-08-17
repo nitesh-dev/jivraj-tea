@@ -6,7 +6,7 @@
     </Head>
     <Header url="about"></Header>
     <OtherLanding name="About Us"></OtherLanding>
-    <About></About>
+    <About :full="true"></About>
     <Testimonial></Testimonial>
     <Gallery></Gallery>
     <Blogs :show-border="true"></Blogs>

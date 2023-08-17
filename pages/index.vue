@@ -7,7 +7,7 @@
     </Head>
     <Header url="/"></Header>
     <HomeLanding></HomeLanding>
-    <About></About>
+    <About :full="false"></About>
     <Products :row-count="1"></Products>
     <Testimonial></Testimonial>
     <Gallery></Gallery>

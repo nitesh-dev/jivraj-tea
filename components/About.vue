@@ -1,7 +1,11 @@
 <script setup lang='ts'>
+defineProps<{
+    full: boolean
+}>()
 </script>
 <template>
     <section class="about">
+        <img src="../public/images/outlines/tea-outline.png" class="outline">
         <div class="page first">
             <img src="../public/images/tea.png" alt="tea">
             <div class="content">
@@ -26,7 +30,7 @@
             </div>
         </div>
 
-        <div class="page middle">
+        <div v-if="full" class="page middle">
             <h4>OUR HISTORY</h4>
             <h2>From the organic tea gardens in India</h2>
             <p>Tea is more than just a means of refreshment in India. It is a feeling; a feeling of togetherness, a feeling
@@ -61,7 +65,7 @@
             </p>
         </div>
 
-        <div class="page last">
+        <div v-if="full" class="page last">
             <div class="content">
                 <div class="left">
                     <h4>ABOUT COMPANY</h4>
@@ -84,6 +88,14 @@
 <style scoped>
 .about {
     min-height: 400px;
+    position: relative;
+}
+
+.about .outline{
+    right: 0;
+    top: 0;
+    width: 200px;
+    position: absolute;
 }
 
 .about .page.first {
