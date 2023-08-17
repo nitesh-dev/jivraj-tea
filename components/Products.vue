@@ -5,6 +5,10 @@ import product2 from '@/public/images/products/product2.png'
 import product3 from '@/public/images/products/product3.png'
 import product4 from '@/public/images/products/product4.png'
 
+defineProps<{
+    rowCount: number
+}>()
+
 const scrollContainer = ref<HTMLDivElement>()
 
 const products = ref([
@@ -27,7 +31,26 @@ const products = ref([
         url: product4,
         name: 'JIVRAJ PREMIUM GREEN TEA',
         price: '₹200.00'
-    },{
+    }, {
+        url: product1,
+        name: 'JIVRAJ CTC',
+        price: '₹49.00 - ₹465.00'
+    },
+    {
+        url: product2,
+        name: 'JIVRAJ DUST',
+        price: '₹110.00 - ₹430.00'
+    },
+    {
+        url: product3,
+        name: 'JIVRAJ SAMAARA BOX',
+        price: '₹49.00 - ₹465.00'
+    },
+    {
+        url: product4,
+        name: 'JIVRAJ PREMIUM GREEN TEA',
+        price: '₹200.00'
+    }, {
         url: product1,
         name: 'JIVRAJ CTC',
         price: '₹49.00 - ₹465.00'
@@ -49,25 +72,24 @@ const products = ref([
     }
 ])
 
-function scrollLeft(){
-    if(scrollContainer.value == undefined) return
+function scrollLeft() {
+    if (scrollContainer.value == undefined) return
     scrollContainer.value.scrollLeft = 0
 }
 
-function scrollRight(){
-    if(scrollContainer.value == undefined) return
+function scrollRight() {
+    if (scrollContainer.value == undefined) return
     scrollContainer.value.scrollLeft = scrollContainer.value.scrollWidth
 }
 
 </script>
 <template>
-
     <section class="products">
         <div class="page">
             <h4>OUR PRODUCTS</h4>
             <div class="heading">
                 <h2>Discover Our Products Line</h2>
-                <div class="slider">
+                <div v-if="rowCount == 1" class="slider">
                     <button @click="scrollLeft" class="icon-button">
                         <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -86,7 +108,12 @@ function scrollRight(){
             <div ref="scrollContainer" class="products-container hide-scroll">
                 <Product v-for="item in products" :url="item.url" :name="item.name" :price="item.price"></Product>
             </div>
-            <button class="primary">
+
+            <div v-for="item, index in rowCount - 1" class="products-container hide-scroll">
+                <Product v-for="item in products" :url="item.url" :name="item.name" :price="item.price"></Product>
+            </div>
+
+            <button v-if="rowCount == 1" class="primary">
                 <span>View All Products</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -97,8 +124,6 @@ function scrollRight(){
     </section>
 </template>
 <style scoped>
-
-
 .products {
     min-height: 400px;
     margin: 4rem 0;
@@ -157,8 +182,8 @@ function scrollRight(){
     fill: white;
 }
 
-@media only screen and (max-width: 600px){
-    .products .heading .slider{
+@media only screen and (max-width: 600px) {
+    .products .heading .slider {
         display: none;
     }
 }

@@ -6,10 +6,10 @@
     </Head>
     <Header url="products"></Header>
     <OtherLanding name="Products"></OtherLanding>
-    <Products></Products>
+    <Products :row-count="3"></Products>
     <Testimonial></Testimonial>
     <Gallery></Gallery>
-    <Blogs></Blogs>
+    <Blogs :show-border="true"></Blogs>
     <ContactUs></ContactUs>
     <Footer></Footer>
 </template>

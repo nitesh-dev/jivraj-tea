@@ -8,7 +8,7 @@
     <Header url="/"></Header>
     <HomeLanding></HomeLanding>
     <About></About>
-    <Products></Products>
+    <Products :row-count="1"></Products>
     <Testimonial></Testimonial>
     <Gallery></Gallery>
     <Blogs :show-border="false"></Blogs>
