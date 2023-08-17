@@ -220,5 +220,14 @@ defineProps({
         display: block;
     }
 
+    
+
+}
+
+
+@media only screen and (max-width: 600px){
+    .contact-us form div {
+        grid-template-columns: 100%;
+    }
 }
 </style>

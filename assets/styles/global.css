@@ -118,6 +118,13 @@ h4 {
     font-size: var(--medium-2-font);
 }
 
+button{
+    transition: all 200ms;
+}
+button:hover{
+    transform: scale(1.05, 1.05);
+}
+
 button.primary {
     background: var(--color-primary);
     border-radius: 4px;

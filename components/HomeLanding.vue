@@ -94,4 +94,12 @@
         right: 1rem;
     }
 }
+
+
+@media only screen and (max-width: 500px) {
+    .landing>img {
+        height: 35%;
+
+    }
+}
 </style>
